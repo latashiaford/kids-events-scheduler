@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Events Scheduler</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Kids Events Scheduler</h1>
+    <h2>Upcoming Events</h2>
+  
+        <ul>
+           events.forEach(event => { %>
+                <li><%= event.title %> - <%= event.date %> at <%= event.time %></li>
+            <% }) %>
+        </ul>
+        
+    <form action="/api/events" method="POST">
+        <input type="text" name="title" placeholder="Event Title" required>
+        <input type="date" name="date" required>
+        <input type="time" name="time" required>
+        <textarea name="description" placeholder="Description"></textarea>
+        <button type="submit">Add Event</button>
+    </form>
+</body>
+</html>

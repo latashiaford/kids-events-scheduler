@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Scheduled Events</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>All Scheduled Events</h1>
+    <ul>
+        for (let i = 0; i <events.length; i++) { %>
+            <li>
+            %= events[i].title %><br>
+                Date: %= events[i].date %><br>
+                Time: %= events[i].time %><br>
+                Description: %= events[i].description %>
+            </li>
+            <hr>
+        % } %>
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>

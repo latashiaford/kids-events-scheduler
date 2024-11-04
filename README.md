@@ -1,2 +1,1 @@
-# kids-events-scheduler
-app to schedule your child's events
+# kids-event-calender
